@@ -1,0 +1,100 @@
+html, body{
+   height: 100%;
+}
+body {
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 1.25rem;
+   line-height: 1.5;
+   background-color: rgb(9, 9, 9);
+   margin: 0;
+   padding: 0;
+    
+  
+}
+ .wrapper {
+   max-width: 50rem;
+   
+   margin: 0 auto;
+   background-color: darkgrey;
+   cursor: pointer;     
+ }
+ .wrapper h1 {
+   font-size: 1.87rem;
+   font-weight: bold;
+   margin: 0;
+   padding-left: 1.25rem;   
+ }
+ .mem {
+   text-align: center;
+  }
+ .mem img {
+   height: 0rem;
+   margin: 0.625rem auto;  
+   transition: 0.5s;
+ } 
+ .head {
+   display: flex;
+   justify-content: space-between;
+  }
+  .head img {
+   transform: rotate(45deg);
+   transition: 0.4s;
+  }
+ .question{
+   display: block;
+   text-align: justify;
+   font-style: italic;
+   color: rgb(80, 30, 195);
+   padding-left: 1.25rem;
+   cursor: pointer;
+   
+ }
+  .answer {
+   display:none;
+   appearance: none;
+ }
+ .bayan {
+   border-bottom: 0.125rem solid gray ;
+   border-top: 0.125rem solid gray;  
+  
+   
+ }
+ .wrapper:hover .question {
+   color: black;
+ } 
+ 
+ .bayan:hover .question {
+   transition: 1s;
+}
+
+.bayan:hover .question .mem img {
+   height: 18.75rem;
+   transition: 2s;
+}
+.bayan:hover .head img {
+   transform: rotate(0deg);
+   transition: 0.4s;
+  }
+.answer:checked ~ .question .icon img {
+   transform: rotate(0deg);
+   transition: 0.4s;
+}
+.answer:checked ~ .question .mem img{
+   height: 18.75rem;
+ }
+ 
+ .answer:checked ~ .question .head {
+   color: black;
+ }
+
+@media screen and (max-width: 750px) {
+   body {
+     font-size: 1rem;
+   }
+ }
+ 
+ @media screen and (max-width: 480px) {
+   body {
+     font-size: 0.8rem;
+   }
+ }
