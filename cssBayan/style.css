@@ -36,6 +36,10 @@ body {
    display: flex;
    justify-content: space-between;
   }
+  .head img {
+   transform: rotate(45deg);
+   transition: 0.4s;
+  }
  .question{
    display: block;
    text-align: justify;
@@ -67,10 +71,30 @@ body {
    height: 300px;
    transition: 2s;
 }
+.bayan:hover .head img {
+   transform: rotate(0deg);
+   transition: 0.4s;
+  }
+.answer:checked ~ .question .icon img {
+   transform: rotate(0deg);
+   transition: 0.4s;
+}
 .answer:checked ~ .question .mem img{
    height: 300px;
  }
  
  .answer:checked ~ .question .head {
    color: black;
+ }
+
+@media screen and (max-width: 750px) {
+   body {
+     font-size: 16px;
+   }
+ }
+ 
+ @media screen and (max-width: 480px) {
+   body {
+     font-size: 12px;
+   }
  }
